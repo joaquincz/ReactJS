@@ -4,7 +4,7 @@ function ItemListContainer(props){
     return (
         <>
         <h1>Tienda {props.greeting}</h1>
-        <ItemCount />
+        <ItemCount stock={5} initial={1} />
         </>
         )
 }
