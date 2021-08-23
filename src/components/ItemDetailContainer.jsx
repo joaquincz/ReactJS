@@ -3,9 +3,10 @@ import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer (){
     const [product, setProduct] = useState({})
+    const id = "1"
     
-    const data = [
-        {
+    const data =[
+         {
             id: "1",
             name: "Lapices",
             description: "Lapices de colores",
@@ -24,13 +25,13 @@ function ItemDetailContainer (){
             stock: 7
         }
     ]
-
     useEffect(() => {
         new Promise((resolve, reject) => {
             
             setTimeout(() => resolve(data), 2000)
         }).then((dataResolve) => {
-            setProduct(dataResolve)
+            const productoEncontrado = dataResolve.find(item => item.id === id)
+            setProduct(productoEncontrado)
         })
         .catch((error) => {
             console.log("error", error)
