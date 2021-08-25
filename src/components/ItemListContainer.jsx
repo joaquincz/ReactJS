@@ -1,11 +1,10 @@
-import ItemCount from './ItemCount'
+//import ItemCount from './ItemCount'
 import ItemList from './ItemList'
 
-function ItemListContainer(props){
+function ItemListContainer(){
     return (
         <>
-        <h1>Tienda {props.greeting}</h1>
-        <ItemCount stock={5} initial={1} />
+        <h1>Tienda E-commerce</h1>
         <ItemList />
         </>
         )
