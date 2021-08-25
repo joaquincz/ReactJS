@@ -4,8 +4,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -29,18 +29,21 @@ function NavBar() {
           <Typography variant="h6" className={classes.title}>
             E-Commerce
           </Typography>
+          <Link to="/">
           <Button color="inherit" variant="outlined" className={classes.menuButton}>
             Home
           </Button>
+          </Link>
+          <Link to="/category/:id">
           <Button color="inherit" variant="outlined" className={classes.menuButton}>
             Servicios
           </Button>
+          </Link>
+          <Link to="/item/:id">
           <Button color="inherit" variant="outlined" className={classes.menuButton}>
             Nosotros
           </Button>
-          <Button color="inherit" variant="outlined" className={classes.menuButton}>
-            Contacto
-          </Button>
+          </Link>
 
           <CartWidget />
 
